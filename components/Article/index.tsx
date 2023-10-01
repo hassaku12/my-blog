@@ -15,24 +15,6 @@ export default function Article({ data }: Props) {
       <TagList tags={data.tags} />
       <p className={styles.description}>{data.description}</p>
       <div className={styles.meta}>
-        {data.writer && (
-          <div className={styles.writer}>
-            <picture>
-              <source
-                type="image/webp"
-                srcSet={`${data.writer?.image?.url}?fm=webp&fit=crop&w=48&h=48 1x, ${data.writer?.image?.url}?fm=webp&fit=crop&w=48&h=48&dpr=2 2x`}
-              />
-              <img
-                src={data.writer?.image?.url}
-                alt=""
-                className={styles.writerIcon}
-                width={data.writer?.image?.width}
-                height={data.writer?.image?.height}
-              />
-            </picture>
-            <span className={styles.writerName}>{data.writer?.name}</span>
-          </div>
-        )}
         <PublishedDate date={data.publishedAt || data.createdAt} />
       </div>
       <picture>
