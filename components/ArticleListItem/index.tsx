@@ -25,7 +25,7 @@ export default function ArticleListItem({ article }: Props) {
               srcSet={`${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126 1x, ${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126&dpr=2 2x`}
             />
             <img
-              src={article.thumbnail?.url || `/noimage.png`}
+              src={article.thumbnail?.url || `/ogp.png`}
               alt=""
               className={styles.image}
               width={article.thumbnail?.width}
@@ -35,7 +35,7 @@ export default function ArticleListItem({ article }: Props) {
         ) : (
           <Image
             className={styles.image}
-            src="/no-image.png"
+            src="/ogp.png"
             alt="No Image"
             width={1200}
             height={630}
@@ -43,6 +43,9 @@ export default function ArticleListItem({ article }: Props) {
         )}
         <dl className={styles.content}>
           <dt className={styles.title}>{article.title}</dt>
+          <dd>
+            <p className={styles.description}>{article.description}</p>
+          </dd>
           <dd>
             <TagList tags={article.tags} hasLink={false} />
           </dd>

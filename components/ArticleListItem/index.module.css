@@ -18,6 +18,10 @@
   margin-bottom: 0.5rem;
 }
 
+.description {
+  color: plum;
+}
+
 @media (max-width: 640px) {
   .link {
     display: block;
