@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './index.module.css';
+import IconLinks from '@/components/iconLinks'
 
 export default function Header() {
   return (
@@ -15,6 +16,7 @@ export default function Header() {
           priority
         />
       </Link>
+      <IconLinks />
     </header>
   );
 }

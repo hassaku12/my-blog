@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { getTagList } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
 import Header from '@/components/Header';
@@ -6,7 +7,7 @@ import Nav from '@/components/Nav';
 import './globals.css';
 import styles from './layout.module.css';
 
-export const metadata = {
+export const metadata:Metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
   title: 'Hassaku Log',
   description: '好きなものや考えたことを好きなように記録します',
